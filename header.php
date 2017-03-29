@@ -34,17 +34,17 @@
 
 	<?php do_action( 'primer_before_header' ); ?>
 
+	<div class="side-masthead">
+
+		<?php do_action( 'primer_header' ); ?>
+
+		<?php do_action( 'primer_after_header' ); ?>
+
+		<?php get_template_part( 'templates/parts/social-navigation' ); ?>
+
+	</div>
+
 	<header id="masthead" class="site-header" role="banner"<?php if ( primer_has_hero_image() ) : ?> style="background:url('<?php echo esc_url( primer_get_hero_image() ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
-
-		<div class="side-masthead">
-
-			<?php do_action( 'primer_header' ); ?>
-
-			<?php do_action( 'primer_after_header' ); ?>
-			
-			<?php get_template_part( 'templates/parts/social-navigation' ); ?>
-
-		</div>
 
 		<?php get_template_part( 'templates/parts/hero' ); ?>
 

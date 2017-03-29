@@ -262,10 +262,7 @@ body {
 	@media #{$medium-up}{
 		margin-top: 0;
 		padding-left: 250px;
-
-		&.admin-bar .side-masthead {
-			top: 32px;
-		}
+		position: relative;
 	}
 }
 
@@ -322,14 +319,14 @@ body {
 	@include clearfix;
 	position: relative;
 	width: 100%;
-	top: 0;
 	text-align: center;
 	z-index: 9999;
 	background-color: $menu-bg-ie;
 	background-color: $menu-background-color;
 
 	@media #{$medium-up}{
-		position: fixed;
+		position: absolute;
+		left: 0;
 		padding: 0 35px;
 	}
 
@@ -349,6 +346,10 @@ body {
 	.site-title-wrapper {
 		@media #{$small-only}{
 			width: 80%;
+
+			.custom-logo-link {
+				display: none;
+			}
 		}
 	}
 
@@ -386,10 +387,8 @@ body {
 
 	@media #{$medium-up}{
 		display: block;
-		left: 0;
 		width: 250px;
-		bottom: 0;
-		top: 0;
+		height: 100%;
 		padding-top: 40px;
 
 		.mobile-container {
